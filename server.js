@@ -72,6 +72,14 @@ app.get('/about', (request, response) => {
   });
 });
 
+app.get('/projects', (request, response) => {
+  // response.send('<h1>about page</h1>');
+  response.render('projects.hbs', {
+    pageTitle: "Projects Page"
+
+  });
+});
+
 app.get('/bad', (request, response) => {
   response.send({
     errorMessage: 'Made a booboo?'
